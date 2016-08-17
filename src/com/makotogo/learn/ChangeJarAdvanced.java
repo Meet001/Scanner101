@@ -78,7 +78,10 @@ public class ChangeJarAdvanced {
     scanner.close();
 
     // Calculate the total
-    int totalCents = numberOfPennies + (numberOfNickels * 5) + (numberOfDimes * 10) + (numberOfQuarters * 25);
+    int totalCents = numberOfPennies +
+        numberOfNickels * 5 +
+        numberOfDimes * 10 +
+        numberOfQuarters * 25;
     double dollarValue = totalCents / 100.0;
 
     outputMessage("Total cents: " + totalCents);
@@ -126,7 +129,8 @@ public class ChangeJarAdvanced {
   private int[] scanInputsSingleLine() {
     int[] ret = null;
 
-    String message = "Enter number of pennies, nickels, dimes, and quarters on the same line. Each amount is separated by a space.";
+    String message = "Enter number of pennies, nickels, dimes, and quarters on the same line. "
+        + "Each amount is separated by a space.";
     outputMessage(message);
     message = "For example: 12 3 2 13 represents 12 pennies, 3 nickels, 2 dimes, and 13 quarters";
     outputMessage(message);

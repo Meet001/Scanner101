@@ -28,7 +28,10 @@ public class ChangeJarBasic {
     scanner.close();
 
     // Calculate the total
-    int totalCents = numberOfPennies + (numberOfNickels * 5) + (numberOfDimes * 10) + (numberOfQuarters * 25);
+    int totalCents = numberOfPennies + 
+        numberOfNickels * 5 + 
+        numberOfDimes * 10 + 
+        numberOfQuarters * 25;
     double dollarValue = totalCents / 100.0;
 
     System.out.println("Total cents: " + totalCents);

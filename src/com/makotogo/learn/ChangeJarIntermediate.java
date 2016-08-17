@@ -80,7 +80,10 @@ public class ChangeJarIntermediate {
     scanner.close();
 
     // Calculate the total
-    int totalCents = numberOfPennies + (numberOfNickels * 5) + (numberOfDimes * 10) + (numberOfQuarters * 25);
+    int totalCents = numberOfPennies +
+        numberOfNickels * 5 +
+        numberOfDimes * 10 +
+        numberOfQuarters * 25;
     double dollarValue = totalCents / 100.0;
 
     prompt("Total cents: " + totalCents + "\n");
